@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1697DFEE-0B6F-4020-9065-A371250F317C}</ProjectGuid>
+    <ProjectGuid>{C4E832C3-DA97-468D-A30B-DB8D3250F9F4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Parachute</RootNamespace>
-    <AssemblyName>Parachute</AssemblyName>
+    <RootNamespace>ParaClub</RootNamespace>
+    <AssemblyName>ParaClub</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config.cs" />
+    <Compile Include="Para.cs" />
+    <Compile Include="Plane.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

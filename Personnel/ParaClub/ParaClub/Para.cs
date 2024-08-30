@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Parachute
+namespace ParaClub
 {
-    internal class Program
+    internal class Para
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
