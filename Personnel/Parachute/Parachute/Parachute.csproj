@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{20C83B75-4AAD-4857-8613-A4DB07D12BEC}</ProjectGuid>
+    <ProjectGuid>{1697DFEE-0B6F-4020-9065-A371250F317C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Snail</RootNamespace>
-    <AssemblyName>Snail</AssemblyName>
+    <RootNamespace>Parachute</RootNamespace>
+    <AssemblyName>Parachute</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Snail.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
