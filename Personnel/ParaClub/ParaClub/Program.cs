@@ -11,36 +11,39 @@ namespace ParaClub
     {
         static void Main(string[] args)
         {
+            List<Plane> planes = new List<Plane>();
+            Plane toto = new Plane();
+
+            List<Para> para = new List<Para>();
+            Para Bob = new Para();
+
+            Console.CursorVisible = false;
+
+
+
 
             while (true)
             {
-                // Modifier le modèle (ce qui *est*)
-                Plane.update();
-                ...
 
                 // Modifier ce que l'on *voit*
-                Console.Clear();
-                Plane.draw();
+                toto.draw();
+                Console.Clear();               
+                toto.move();
+                
 
                 // Temporiser
-                Thread.Sleep(100);
-            }
-            if (Console.KeyAvailable) // L'utilisateur a pressé une touche
-            {
-                keyPressed = Console.ReadKey(false);
-                switch (keyPressed.Key)
-                {
-                    case ConsoleKey.Escape:
-                        ...
-                break;
-                        ...
-        }
+                Thread.Sleep(40);
             }
 
 
 
 
-
         }
+            
+
+
+
+
+        
     }
 }
