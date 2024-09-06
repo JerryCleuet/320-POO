@@ -9,7 +9,10 @@ namespace ParaClub
 {
     internal class Plane
     {
-        public string[] view =
+        private const int WIDTH = 28;
+        private const int HEIGHT = 6;
+
+        private string[] view =
     {
             @" _                         ",
             @"| \                        ",
@@ -18,29 +21,53 @@ namespace ParaClub
             @"  \_______ --------- __>-} ",
             @"        \_____|_____/   |  "
         };
-        public int x = 0;
-        public int y = 0;
+        private int x = 0;
+        private int altitude = 0;
+        private List<Para> parachutists;
 
         //constructeur
+        public Plane()
+        {
+            x = 0;
+            altitude = Config.SCREEN_HEIGHT;
+            parachutists = new List<Para>();
+        }
+
 
         //méthode
         public void move()
         {
-            for (int i = 0; i < view.Length; i++)
+            if (x >= Config.SCREEN_WIDTH)
             {
-                Console.SetCursorPosition(x, y + i);
-                Console.WriteLine(view[i]);
+                x = 0;
             }
-
+            else
+            {
+                x++;
+            }
         }
 
         public void draw()
         {
-            x++;
-            /*for (int i = 0; i < view.Length; i++)
+           
+            for (int i = 0; i < view.Length; i++)
             {
+                Console.SetCursorPosition(x, i);
                 Console.WriteLine(view[i]);
-            }*/
+            }
+        }
+
+        public void board(Para para)
+        {
+            this.parachutists.Add(para);
+        }
+        internal Para dropParachutist()
+        {
+            Para parachutist = parachutists.First();
+            parachutists.Remove(parachutist);
+            parachutist.x = x;
+            parachutist.altitude = this.altitude;
+            return parachutist;
         }
     }
 }
