@@ -1,3 +1,5 @@
+using Drones.Model;
+
 namespace Drones
 {
     internal static class Program
@@ -23,11 +25,22 @@ namespace Drones
             List<Building> buildings = new List<Building>();
             Building building = new Building();
             building.X = 300;
-            building.Y = 400;
+            building.Y = 500;
             buildings.Add(building);
+            
+
+            List<Factory> factorys = new List<Factory>();
+            Factory factory = new Factory();
+            building.X =1000;
+            building.Y = 500;
+            factorys.Add(factory);
+
+            List<Store> stores = new List<Store>();
+            Store store = new Store();
+
 
             // Démarrage
-            Application.Run(new AirSpace(fleet, buildings));           
+            Application.Run(new AirSpace(fleet, buildings, factorys));           
         }
     }
 }

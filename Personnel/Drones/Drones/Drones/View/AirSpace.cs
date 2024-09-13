@@ -1,3 +1,5 @@
+using Drones.Model;
+
 namespace Drones
 {
     // La classe AirSpace représente le territoire au dessus duquel les drones peuvent voler
@@ -9,12 +11,13 @@ namespace Drones
         // La flotte est l'ensemble des drones qui évoluent dans notre espace aérien
         private List<Drone> fleet;
         private List<Building> buildings;
+        private List<Factory> factorys;
 
         BufferedGraphicsContext currentContext;
         BufferedGraphics airspace;
 
         // Initialisation de l'espace aérien avec un certain nombre de drones
-        public AirSpace(List<Drone> fleet, List<Building> buildings)
+        public AirSpace(List<Drone> fleet, List<Building> buildings, List<Factory> factorys)
         {
             InitializeComponent();
             // Gets a reference to the current BufferedGraphicsContext
@@ -24,6 +27,7 @@ namespace Drones
             airspace = currentContext.Allocate(this.CreateGraphics(), this.DisplayRectangle);
             this.fleet = fleet;
             this.buildings = buildings;
+            this.factorys = factorys;
         }
 
 
@@ -40,6 +44,10 @@ namespace Drones
             foreach (Building building in buildings)
             {
                 building.Render(airspace);
+            }
+            foreach (Factory factory in factorys)
+            {
+                factory.Render(airspace);
             }
             airspace.Render();
         }

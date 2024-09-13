@@ -15,5 +15,11 @@ namespace Drones
             return alea.Next(-2, 3);
         }
 
+        public static Random alval = new Random();
+
+        public static int AlVal()
+        {
+            return alval.Next(0, 600);
+        }
     }
 }
