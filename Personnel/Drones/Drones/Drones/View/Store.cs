@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace Drones
 {
-    public partial class Building
+    public partial class Store : Building
     {
-        //voir le building
-
-        private Pen BuildingBrush = new Pen(Color.Blue, 30);
+        //voir le magasin
+        private Pen StoreBrush = new Pen(Color.Green, 8);
         public void Render(BufferedGraphics drawingSpace)
         {
-            drawingSpace.Graphics.DrawRectangle(BuildingBrush, new Rectangle(X - 1, Y - 1, 30, 30));
+            drawingSpace.Graphics.DrawEllipse(StoreBrush, new Rectangle(X - 1, Y - 1, 8, 8));
         }
     }
 }

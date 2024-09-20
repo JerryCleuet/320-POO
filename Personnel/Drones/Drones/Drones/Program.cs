@@ -1,4 +1,4 @@
-using Drones.Model;
+using Drones;
 
 namespace Drones
 {
@@ -22,25 +22,23 @@ namespace Drones
             drone.Name = "Joe";
             fleet.Add(drone);
 
-            List<Building> buildings = new List<Building>();
-            Building building = new Building();
-            building.X = 300;
-            building.Y = 500;
-            buildings.Add(building);
-            
-
             List<Factory> factorys = new List<Factory>();
             Factory factory = new Factory();
-            building.X =1000;
-            building.Y = 500;
+            factory.X =800;
+            factory.Y = 500;
             factorys.Add(factory);
+            Console.WriteLine("Consommation de l'usine :\n15KW/h");
+            
 
             List<Store> stores = new List<Store>();
             Store store = new Store();
-
+            store.X = 400;
+            store.Y = 500;
+            stores.Add(store);
+            Console.WriteLine("Horaires du magasin :\nLundi 8h-17h\nMardi 8h-17h\nAutres jours : fermé");
 
             // Démarrage
-            Application.Run(new AirSpace(fleet, buildings, factorys));           
+            Application.Run(new AirSpace(fleet, factorys, stores));           
         }
     }
 }

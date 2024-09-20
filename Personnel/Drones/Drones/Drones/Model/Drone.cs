@@ -1,4 +1,6 @@
-﻿namespace Drones
+﻿using Drones.Helpers;
+
+namespace Drones
 {
     // Cette partie de la classe Drone définit ce qu'est un drone par un modèle numérique
     public partial class Drone
