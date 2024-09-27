@@ -19,6 +19,11 @@ namespace Drones
         public int Y { get { return _y; } set { _y = value; } }
         private bool LowBattery { get; set; }
 
+        public Drone(int x, int y)
+        {
+            X = x;
+            Y = y;
+        }
         public bool Evacuate(Rectangle zone)
         {
             throw new NotImplementedException();

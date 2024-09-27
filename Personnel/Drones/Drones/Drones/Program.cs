@@ -18,15 +18,8 @@ namespace Drones
 
             // Création de la flotte de drones
             List<Drone> fleet = new List<Drone>();
-            Drone drone = new Drone();
-            drone.X = 500;
-            drone.Y = 500;
+            Drone drone = new Drone(500,500);
             drone.Name = "Joe";
-            fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
             fleet.Add(drone);
 
 
