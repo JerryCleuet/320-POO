@@ -28,6 +28,11 @@ namespace Drones
             this.fleet = fleet;
             this.factorys = factorys;
             this.stores = stores;
+
+            if(fleet.Count > 10)
+            {
+                throw new Exception("Plus de 10 drones");
+            }
         }
 
 

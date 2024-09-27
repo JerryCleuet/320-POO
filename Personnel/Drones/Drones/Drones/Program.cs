@@ -14,21 +14,34 @@ namespace Drones
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
+
+
             // Création de la flotte de drones
-            List<Drone> fleet= new List<Drone>();
+            List<Drone> fleet = new List<Drone>();
             Drone drone = new Drone();
-            drone.X = 100;
-            drone.Y = 100;
+            drone.X = 500;
+            drone.Y = 500;
             drone.Name = "Joe";
             fleet.Add(drone);
+            fleet.Add(drone);
+            fleet.Add(drone);
+            fleet.Add(drone);
+            fleet.Add(drone);
+            fleet.Add(drone);
+            fleet.Add(drone);
+            fleet.Add(drone);
+            fleet.Add(drone);
+            fleet.Add(drone);
+            fleet.Add(drone);
+
 
             List<Factory> factorys = new List<Factory>();
             Factory factory = new Factory();
-            factory.X =800;
+            factory.X = 800;
             factory.Y = 500;
             factorys.Add(factory);
             Console.WriteLine("Consommation de l'usine :\n15KW/h");
-            
+
 
             List<Store> stores = new List<Store>();
             Store store = new Store();
@@ -38,7 +51,14 @@ namespace Drones
             Console.WriteLine("Horaires du magasin :\nLundi 8h-17h\nMardi 8h-17h\nAutres jours : fermé");
 
             // Démarrage
-            Application.Run(new AirSpace(fleet, factorys, stores));           
+            try
+            {
+                Application.Run(new AirSpace(fleet, factorys, stores));
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine("Plus de 10 drones" + ex);
+            }
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Drones
         // que 'interval' millisecondes se sont écoulées
         public void Update(int interval)
         {
-            _x += 2;                                    // Il s'est déplacé de 2 pixels vers la droite
+            _x += 1;                                    // Il s'est déplacé de 2 pixels vers la droite
             _y = AleaValueHelper.AleaValue();                    // Il s'est déplacé d'une valeur aléatoire vers le haut ou le bas
             _charge--;                                  // Il a dépensé de l'énergie
         }
