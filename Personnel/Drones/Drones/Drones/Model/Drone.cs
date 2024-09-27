@@ -1,4 +1,6 @@
 ﻿using Drones.Helpers;
+using System.DirectoryServices.ActiveDirectory;
+using System.Security.Policy;
 
 namespace Drones
 {
@@ -12,6 +14,8 @@ namespace Drones
         private int _x;                                // Position en X depuis la gauche de l'espace aérien
         private int _y;                                 // Position en Y depuis le haut de l'espace aérien
         private bool _LowBattery;
+        private EvacuationState _EvacuationState;
+        private Rectangle _NoflyZone;
 
         public int Charge { get; set; }
         public string Name { get; set; }
@@ -26,18 +30,38 @@ namespace Drones
         }
         public bool Evacuate(Rectangle zone)
         {
-            throw new NotImplementedException();
+            _NoflyZone = zone;            
+            Rectangle me = new Rectangle(X - 4, Y - 2, 8, 8);
+
+            if (!zone.IntersectsWith(me))
+            {
+                _EvacuationState = EvacuationState.Evacuated;
+                return true;
+            }
+            else
+            {
+                _EvacuationState = EvacuationState.Evacuating;
+                return false;
+            }
         }
 
         public void FreeFlight()
         {
-            throw new NotImplementedException();
+            _EvacuationState = EvacuationState.Free;
+            _NoflyZone = Rectangle.Empty;
+           
         }
 
         public EvacuationState GetEvacuationState()
         {
-            throw new NotImplementedException();
+          return _EvacuationState;
+
         }
+
+
+
+
+
 
         // Cette méthode calcule le nouvel état dans lequel le drone se trouve après
         // que 'interval' millisecondes se sont écoulées
