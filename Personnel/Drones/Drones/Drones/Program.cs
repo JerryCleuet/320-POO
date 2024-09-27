@@ -28,11 +28,6 @@ namespace Drones
             fleet.Add(drone);
             fleet.Add(drone);
             fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
 
 
             List<Factory> factorys = new List<Factory>();
