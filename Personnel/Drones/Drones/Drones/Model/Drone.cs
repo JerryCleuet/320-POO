@@ -30,7 +30,7 @@ namespace Drones
         }
         public bool Evacuate(Rectangle zone)
         {
-            _NoflyZone = zone;            
+            _NoflyZone = zone;
             Rectangle me = new Rectangle(X - 4, Y - 2, 8, 8);
 
             if (!zone.IntersectsWith(me))
@@ -49,19 +49,14 @@ namespace Drones
         {
             _EvacuationState = EvacuationState.Free;
             _NoflyZone = Rectangle.Empty;
-           
+
         }
 
         public EvacuationState GetEvacuationState()
         {
-          return _EvacuationState;
+            return _EvacuationState;
 
         }
-
-
-
-
-
 
         // Cette méthode calcule le nouvel état dans lequel le drone se trouve après
         // que 'interval' millisecondes se sont écoulées

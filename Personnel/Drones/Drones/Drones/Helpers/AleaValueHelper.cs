@@ -21,5 +21,10 @@ namespace Drones.Helpers
         {
             return alval.Next(0, 600);
         }
+
+        public static int AleaTime()
+        {
+            return (int)alval.Next(0, 2);
+        }
     }
 }
