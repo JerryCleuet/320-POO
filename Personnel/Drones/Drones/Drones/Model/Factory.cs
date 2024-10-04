@@ -10,6 +10,7 @@ namespace Drones
     {
         //modèle
         private float _PowerConsumption;
+        private int _IdFactory;
 
         public float PowerConsumption
         {
@@ -17,6 +18,11 @@ namespace Drones
             set { _PowerConsumption = value; }
         }
 
+        public int IdFactory
+        {
+            get { return _IdFactory; }
+            set { _IdFactory = value; }
+        }
 
       
     }
