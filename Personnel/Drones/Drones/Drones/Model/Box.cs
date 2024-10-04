@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Drones
 {
-    class Box
+    public class Box
     {
         private int _IdBox;
         private int _NbrKilos;

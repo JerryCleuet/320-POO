@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,14 +12,16 @@ namespace Drones
         //Modélisation de la centrale de distribution
         List<Box> boxes = new List<Box>();
 
-        public void AddBox()
+        public void AddBox(Box box)
         {
-            throw new NotImplementedException();
+            boxes.Add(box);
+            Console.WriteLine("Une boîte de smarties a été créée");
         }
 
-        public void DispatchBox()
+        public void RemoveBox(Box box)
         {
-            throw new NotImplementedException();
+            boxes.Remove(box);
+            Console.WriteLine("Une boîte de smarties a été livrée");
         }
     }
 }
