@@ -17,7 +17,6 @@ namespace Drones
             boxes.Add(box);
             Console.WriteLine("Une boîte de smarties a été enregistrée");
         }
-
         public void RemoveBox(Box box)
         {
             boxes.Remove(box);
