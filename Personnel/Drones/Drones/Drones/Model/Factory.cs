@@ -27,14 +27,18 @@ namespace Drones
         }
 
         public int CreationTime
-        { get { return _CreationTime; } set { _CreationTime = value; } }
+        {
+            get { return _CreationTime; }
+            set { _CreationTime = value; }
+        }
+
 
         public void Update(int interval)
         {
             if (CreationTime == 50)
             {
                 Console.WriteLine("Un carton de smarties vient d'être créé");
-                CreationTime -= 50;                
+                CreationTime -= 50;
             }
             else
             {

@@ -38,6 +38,9 @@ namespace Drones
             stores.Add(store);
             Console.WriteLine("Horaires du magasin :\nLundi 8h-17h\nMardi 8h-17h\nAutres jours : fermé");
 
+            List<Box> boxes = new List<Box>();
+
+
             // Démarrage
             try
             {

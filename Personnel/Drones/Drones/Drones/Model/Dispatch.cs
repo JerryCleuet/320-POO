@@ -15,13 +15,12 @@ namespace Drones
         public void AddBox(Box box)
         {
             boxes.Add(box);
-            Console.WriteLine("Une boîte de smarties a été créée");
+            Console.WriteLine("Une boîte de smarties a été enregistrée");
         }
 
         public void RemoveBox(Box box)
         {
             boxes.Remove(box);
-            Console.WriteLine("Une boîte de smarties a été livrée");
         }
     }
 }
