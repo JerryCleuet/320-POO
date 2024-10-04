@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace Drones
 {
-    class Box
+    public class Dispatch : IDispatchable
     {
-        private int _IdBox;
-        private int _NbrKilos;
-        private Color _ColorBox;
-
-
+        //Modélisation de la centrale de distribution
+        List<Box> boxes = new List<Box>();
     }
 }

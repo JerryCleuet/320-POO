@@ -12,6 +12,7 @@ namespace Drones
         private List<Drone> fleet;
         private List<Factory> factorys;
         private List<Store> stores;
+        static Dispatch dispatch;
 
         BufferedGraphicsContext currentContext;
         BufferedGraphics airspace;
