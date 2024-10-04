@@ -43,7 +43,7 @@ namespace DronesTest
                 Box box = new Box();
             }
             //Assert
-                Assert.AreEqual(j, "le nombre de boîtes est incorrect");            
+                Assert.AreEqual(10, "le nombre de boîtes est incorrect");            
         }
 
     }
